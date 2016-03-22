@@ -9,7 +9,7 @@ def sum arr
   arr.each do |i|
     arr_1_sum += i
   end
-  return arr_1_sum
+  arr_1_sum
 end
 
 def max_2_sum arr
@@ -17,7 +17,7 @@ def max_2_sum arr
   return 0 if arr.length==0
   return arr[0] if arr.length==1
   arr_sort = arr.sort
-  return arr_sort[arr_sort.length-1]+arr_sort[arr_sort.length-2]
+  arr_sort[arr_sort.length-1]+arr_sort[arr_sort.length-2]
 end
 
 def sum_to_n? arr, n
@@ -29,14 +29,14 @@ def sum_to_n? arr, n
     arr_copy.delete(i)
     return true if arr_copy.include?(n-i)
   end
-  return false
+  false
 end
 
 # Part 2
 
 def hello(name)
   # YOUR CODE HERE
-  return "Hello, "+name
+  "Hello, "+name
 end
 
 def starts_with_consonant? s
@@ -44,7 +44,7 @@ def starts_with_consonant? s
   return false if s == ''
   return false if s =~ /^[^a-zA-Z](.*)/
   return false if s =~ /^[aeiouAEIOU](.*)/
-  return true
+  true
 end
 
 def binary_multiple_of_4? s
@@ -56,7 +56,7 @@ def binary_multiple_of_4? s
     end
     return false
   end
-  return false
+  false
 end
 
 # Part 3
@@ -78,7 +78,7 @@ class BookInStock
     @isbn = isbn
   end
   def isbn
-    return @isbn
+    @isbn
   end
   
   def price= price
@@ -86,7 +86,7 @@ class BookInStock
     @price = price
   end
   def price
-    return @price
+    @price
   end
   
   def price_as_string
