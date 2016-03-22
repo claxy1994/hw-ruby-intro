@@ -73,20 +73,16 @@ class BookInStock
     @isbn,@price = isbn,price
   end
   
+  attr_reader :isbn, :price
+  
   def isbn= isbn
     raise ArgumentError if isbn.empty?
     @isbn = isbn
-  end
-  def isbn
-    @isbn
   end
   
   def price= price
     raise ArgumentError if price<=0
     @price = price
-  end
-  def price
-    @price
   end
   
   def price_as_string
